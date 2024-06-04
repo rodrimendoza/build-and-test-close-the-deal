@@ -1,0 +1,35 @@
+name: Run Tests
+
+on:
+  push:
+    branches:
+      - '**'
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      DD_API_KEY: ${{ secrets.DD_API_KEY }}
+      DD_CIVISIBILITY_AGENTLESS_ENABLED: true
+      DD_SERVICE: close-the-deal-tests
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Setup web app
+        run: npm run serve-app &
+
+      - name: Run tests
+        ## ******CLOSE THE DEAL TODO*******: SUBSTITUTE BY THE COMMAND IN THE IN APP ONBOARDING
+        #run: echo "noop" ## ******CLOSE THE DEAL TODO*******: Delete me!
+        run: npm test
+        env:
+          NODE_OPTIONS: -r dd-trace/ci/init
