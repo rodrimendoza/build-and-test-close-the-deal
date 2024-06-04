@@ -30,7 +30,7 @@ jobs:
       - name: Run tests
         ## ******CLOSE THE DEAL TODO*******: SUBSTITUTE BY THE COMMAND IN THE IN APP ONBOARDING
         run: |
-          echo "noop"
+          NODE_OPTIONS="-r dd-trace/ci/init" DD_ENV=test-rodrigom DD_SERVICE=close-the-deal-tests npm test
         continue-on-error: true
         env:
           NODE_OPTIONS: -r dd-trace/ci/init
