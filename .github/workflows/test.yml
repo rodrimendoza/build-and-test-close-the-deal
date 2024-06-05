@@ -10,9 +10,10 @@ jobs:
   test:
     runs-on: ubuntu-latest
     env:
-      DD_API_KEY: ${{ secrets.DD_API_KEY }}
+      DD_API_KEY: ${{ secrets.DD_API_KEY_TEST }}
       DD_CIVISIBILITY_AGENTLESS_ENABLED: true
       DD_SERVICE: close-the-deal-tests
+      DD_SITE: datad0g.com
 
     steps:
       - name: Checkout repository
