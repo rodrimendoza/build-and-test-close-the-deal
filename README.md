@@ -4,7 +4,6 @@
 
 Find how to setup this project.
 
-
 ### Fork repository
 
 First thing is to fork this repository:
