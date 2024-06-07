@@ -6,6 +6,7 @@ Find how to setup this project.
 
 ### Fork repository
 
+
 First thing is to fork this repository:
 
 <img src="assets/fork-repository.png" alt="For the repository" width="400"/>
