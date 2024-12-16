@@ -20,7 +20,7 @@ describe('Array Utilities', () => {
 
   test('calculateAverage should return the average of numbers in an array', async () => {
     expect(calculateAverage([1, 2, 3, 4, 5])).toBe(3);
-    expect(calculateAverage([10, 20, 30])).toBe(21);
+    expect(calculateAverage([10, 20, 30])).toBe(20);
   });
 
   // **EARLY FLAKE DETECTION**: uncomment this test to test Early Flake Detection
