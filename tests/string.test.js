@@ -27,7 +27,7 @@ describe('String Utilities', () => {
   });
 
   // **Failing test**: remove me!
-  // trigger CI 2
+  // trigger CI 3
   test('countVowels should count the number of consonant in a string', () => {
     expect(countVowels('hello')).toBe(2);
   });
